@@ -1,0 +1,101 @@
+ /* PC、スマホ共通スタイル */
+
+ @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+ body {
+   font-family: 'Noto Sans JP', sans-serif;
+ }
+
+ header {
+   width: 100%;
+   background-color: white;
+   z-index: 10px
+ }
+
+ .wrapper {
+   max-width: 1200px;
+   padding: 0 16px;
+   margin: 0 auto;
+   box-sizing: border-box;
+ }
+
+ header img {
+   width: 2rem;
+   margin: 15px auto;
+ }
+
+ /* ―――――――――――――――――――――――――――――――――――――
+  ナビゲーション 
+――――――――――――――――――――――――――――――――――――― */
+ nav {
+   width: 100%;
+   background-color: #272727
+ }
+
+ nav ul {
+   display: flex;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ nav li {
+   margin: 10px 20px 10px 20px;
+ }
+
+ nav a:link {
+   color: #ffffff;
+   text-decoration: none;
+ }
+
+ nav a:visited {
+   color: #ffffff;
+   text-decoration: none;
+ }
+
+ nav a:hover {
+   color: #ffffff;
+   text-decoration: underline;
+ }
+
+ nav a:active {
+   color: #ffffff;
+   text-decoration: none;
+ }
+
+ /* ―――――――――――――――――――――――――――――――――――――
+  メイン
+――――――――――――――――――――――――――――――――――――― */
+ .pickup-all {
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+ .pickup{
+  width:30%;
+ }
+
+ .pickup img {
+   width: 100%;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ footer {
+   text-align: center;
+   font-size: 0.5rem;
+ }
