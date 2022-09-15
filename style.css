@@ -3,13 +3,16 @@
  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
  body {
-   font-family: 'Noto Sans JP', sans-serif;
+   font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+   line-height: normal;
  }
 
  header {
    width: 100%;
    background-color: white;
-   z-index: 10px
+   z-index: 10px;
+   position: fixed;
+   top: 0;
  }
 
  .wrapper {
@@ -22,6 +25,18 @@
  header img {
    width: 2rem;
    margin: 15px auto;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ li {
+   list-style: none;
+ }
+
+ main {
+   margin-top: 150px;
  }
 
  /* ―――――――――――――――――――――――――――――――――――――
@@ -39,7 +54,8 @@
  }
 
  nav li {
-   margin: 10px 20px 10px 20px;
+   margin: 10px 60px 10px 0px;
+   font-size: 14px;
  }
 
  nav a:link {
@@ -63,39 +79,236 @@
  }
 
  /* ―――――――――――――――――――――――――――――――――――――
-  メイン
+  ピックアップ
 ――――――――――――――――――――――――――――――――――――― */
  .pickup-all {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
+   margin: 40px 0 60px 0;
  }
 
- .pickup{
-  width:30%;
+ .pickup {
+   width: 32%;
  }
 
  .pickup img {
    width: 100%;
+   margin-bottom: 20px;
+ }
+
+ .pickup h2 {
+   /* line-height: 1.5; */
+   margin-bottom: 20px;
+ }
+
+ .readmore {
+   text-align: center;
+ }
+
+ .readmore a {
+   padding-bottom: 1px;
+   color: #333;
+   position: relative;
+ }
+
+ .readmore a::after {
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   left: 0;
+   bottom: 0;
+   background: #333;
+   transition: all 200ms ease;
+ }
+
+ .readmore a:hover::after {
+   opacity: 0;
+   transform: translateY(3px);
+ }
+
+ /* ――――――――――――――――――――――――――――――――――――――――――――――――――――
+  メイン
+―――――――――――――――――――――――――――――――――――――――――――――――――――― */
+ /* ―――――――――――――――――――――――――――――――――――――
+  投稿
+――――――――――――――――――――――――――――――――――――― */
+ .container {
+   width: 65%;
+   margin-top: 10px;
+ }
+
+ .link:visited {
+   color: #000000;
+ }
+
+ .title {
+   display: block;
+   margin: 0px 0 20px 0;
+   font-size: 1.5rem;
+   font-weight: bold;
+ }
+
+ .second {
+   display: flex;
+   font-size: 0.9rem;
+   margin-bottom: 20px;
+ }
+
+ .second .link {
+   margin-right: 20px;
+ }
+
+ .post {
+   width: 100%;
+   margin-bottom: 80px;
+ }
+
+ .post img {
+   width: 100%;
+ }
+
+ .post p {
+   padding: 10px 40px 30px 40px;
+ }
+
+ /* ―――――――――――――――――――――――――――――――――――――
+  サイト右側
+――――――――――――――――――――――――――――――――――――― */
+ #main-content {
+   display: flex;
+   justify-content: space-between
+ }
+
+ .side-content {
+   width: 30%;
+   margin: 0;
+   padding: 20px;
+ }
+
+ /* ――――――――――――――――――――――――――――
+  プロフィール
+―――――――――――――――――――――――――――――――― */
+ .profile {
+   margin-bottom: 60px;
+ }
+
+ .profile img {
+   width: 130px;
+   border-radius: 50%;
+   display: block;
+   margin: 0 auto;
+ }
+
+ .profile h2 {
+   text-align: center;
+   font-size: 1.2rem;
+   margin: 30px auto;
+ }
+
+ .profile p {
+   font-size: 0.875rem;
+   /* line-height: 1.5; */
+ }
+
+ /* ――――――――――――――――――――――――――――
+  ランキング
+―――――――――――――――――――――――――――――――― */
+ .ranking {
+   margin-bottom: 120px;
+ }
+
+ .ranking h2 {
+   font-size: 1.175rem;
+   text-align: center;
+   margin-bottom: 40px;
+ }
+
+ .ranking img {
+   width: 100%;
+   margin: 0 auto;
+ }
+
+ .ranking-frame {
+   margin-bottom: 40px;
+   font-size: 0.875rem;
+ }
+
+ /* ――――――――――――――――――――――――――――
+  アーカイブ
+―――――――――――――――――――――――――――――――― */
+ .archive h2 {
+   text-align: center;
+   margin-bottom: 40px;
+ }
+
+ .archive li {
+   font-size: 0.875rem;
+   border-top: solid 1px #000000;
+   padding: 20px;
+ }
+
+ .archive ul {
+   border-bottom: solid 1px #000000;
+ }
+
+ main {
+   margin-bottom: 100px;
+ }
+
+ /* ――――――――――――――――――――――――――――
+  フッター
+―――――――――――――――――――――――――――――――― */
+ footer {
+   background-color: #f7f7f7
+ }
+
+ .footcontent {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 50px;
+   margin:50px auto 50px auto;
+ }
+
+ .footer-group {
+   width: 30%;
+ }
+
+ footer h2 {
+   font-size: 1.125rem;
+   margin-bottom: 20px;
+ }
+
+ #about p {
+   font-size: 0.875rem;
+   margin-bottom:20px;
+ }
+
+ #about li {
+  margin-bottom:5px;
+}
+
+ .footer-group li {
+  font-size:0.875rem;
+  
+ }
+
+  #about li:before {
+   content: "\025b6";
+ }
+
+ #menu li {
+  border-top:solid 1px #000000;
+  padding:15px;
+ }
+
+ #menu ul {
+  border-bottom:solid 1px #000000;
  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- footer {
+.copyright {
    text-align: center;
-   font-size: 0.5rem;
+   font-size: 0.75rem;
+   padding:10px;
  }
